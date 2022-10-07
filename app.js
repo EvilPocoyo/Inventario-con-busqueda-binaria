@@ -51,25 +51,8 @@ document.getElementById('producto-b').addEventListener('submit', function(e){
                 listaProducto.innerHTML = `<h4>Producto no encontrado</h4>`;
         }
 
-        //invt.buscar(codigoBuscar);
-
         e.preventDefault();
 });
-
-/*document.getElementById('producto-insert').addEventListener('submit', function(e){
-        const codigo = document.getElementById('codigoI').value;
-        const nombre = document.getElementById('nombreI').value;
-        const precio = document.getElementById('precioI').value;
-        const cantidad = document.getElementById('cantidadI').value;
-        const posicion = document.getElementById('posicionI').value;
-        
-        const producto = new Producto(codigo, nombre, precio, cantidad);
-
-        invt.agregarPosicion(producto,posicion);
-        invt.verInvt();
-       
-        e.preventDefault();
-});*/
 
 document.getElementById('producto-m').addEventListener('submit', function(e){    
         let element = invt.verInvt();
@@ -79,9 +62,9 @@ document.getElementById('producto-m').addEventListener('submit', function(e){
         e.preventDefault();
 });
 
-document.getElementById('producto-in').addEventListener('submit', function(e){    
+document.getElementById('producto-in').addEventListener('submit', function(e){  
         invt.invertir();
         invt.verInvt();
-        
+
         e.preventDefault();
 });
