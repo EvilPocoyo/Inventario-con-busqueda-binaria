@@ -9,7 +9,7 @@ export class Inventario {
     verInvt(){
         let cadena = '';
         for(let i = 0; i < this.listaInvt.length; i++){
-            cadena = `
+            cadena += `
             <div class="card text-center mb-4">
                 <div class="card-body">
                     <strong>codigo</strong> ${this.listaInvt[i].codigo}
@@ -26,7 +26,7 @@ export class Inventario {
 
     eliminar(codigo){
         let x=0;
-        let prod = '';
+        let prod = null;
         for(let i = 0; i < this.listaInvt.length; i++){
             if(codigo === this.listaInvt[i].codigo){
                 for (let j=i; j<this.listaInvt.length-1; j++){
@@ -34,7 +34,7 @@ export class Inventario {
                 }
                 this.listaInvt[this.listaInvt.length-1]=x;
                 this.listaInvt.pop();
-                prod = alert("Producto eliminado");
+                prod = true;
             }
         }
         return prod;
@@ -98,7 +98,7 @@ export class Inventario {
         }
     }*/
 
-    agregarPosicion(producto, posicion){
+    /*agregarPosicion(producto, posicion){
         posicion = posicion - 1;
         let aux = this.listaInvt[posicion];
         this.listaInvt[posicion] = producto;
@@ -108,7 +108,7 @@ export class Inventario {
             aux = aux2;
         }
         this.listaInvt.push(aux); 
-    }
+    }*/
 
     invertir(){
         let aux = [];

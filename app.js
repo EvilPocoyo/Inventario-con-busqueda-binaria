@@ -27,9 +27,15 @@ document.getElementById('producto-form').addEventListener('submit', function(e){
 document.getElementById('producto-e').addEventListener('submit', function(e){
         const codigoEliminar = document.getElementById('codigoEliminar').value;
         
-        invt.eliminar(codigoEliminar);
-        invt.verInvt();
-
+        let element = invt.eliminar(codigoEliminar);
+        if(element){
+                let listarProductos = document.getElementById('product-list');
+                listarProductos.innerHTML = `<h4>Producto eliminado con codigo:</h4>${codigoEliminar}`;
+        }else{
+                let listarProductos = document.getElementById('product-list');
+                listarProductos.innerHTML = `<h4>Producto no encontrado</h4>`;
+        }
+        
         e.preventDefault();
 });
 
@@ -50,7 +56,7 @@ document.getElementById('producto-b').addEventListener('submit', function(e){
         e.preventDefault();
 });
 
-document.getElementById('producto-insert').addEventListener('submit', function(e){
+/*document.getElementById('producto-insert').addEventListener('submit', function(e){
         const codigo = document.getElementById('codigoI').value;
         const nombre = document.getElementById('nombreI').value;
         const precio = document.getElementById('precioI').value;
@@ -63,7 +69,7 @@ document.getElementById('producto-insert').addEventListener('submit', function(e
         invt.verInvt();
        
         e.preventDefault();
-});
+});*/
 
 document.getElementById('producto-m').addEventListener('submit', function(e){    
         let element = invt.verInvt();
