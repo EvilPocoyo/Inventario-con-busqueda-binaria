@@ -69,4 +69,5 @@ document.getElementById('producto-in').addEventListener('submit', function(e){
         let listaProducto = document.getElementById('product-list');
         listaProducto.innerHTML = element;
         e.preventDefault();
+        
 });
