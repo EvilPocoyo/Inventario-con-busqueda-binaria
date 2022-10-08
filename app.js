@@ -64,7 +64,9 @@ document.getElementById('producto-m').addEventListener('submit', function(e){
 
 document.getElementById('producto-in').addEventListener('submit', function(e){  
         invt.invertir();
-        invt.verInvt();
 
+        let element = invt.verInvt();
+        let listaProducto = document.getElementById('product-list');
+        listaProducto.innerHTML = element;
         e.preventDefault();
 });
